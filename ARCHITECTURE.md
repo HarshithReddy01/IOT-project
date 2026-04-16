@@ -544,7 +544,7 @@ logs/
 
 ---
 
-## 14. Known Limitations (Honest)
+## 14. Known Limitations
 
 1. **Loopback only.** All measurements are on a single Windows 11 machine using the loopback interface (127.0.0.1). Network propagation delay, packet loss, and radio-layer overhead are not present. Results represent computation cost, not end-to-end IoT network cost.
 
