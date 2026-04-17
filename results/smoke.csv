@@ -1,0 +1,2 @@
+trial_id,protocol,payload_size_bytes,timestamp_iso,hardware_tag,t_handshake_start_ns,t_handshake_end_ns,t_mqtt_connect_start_ns,t_connected_ns,t_publish_start_ns,t_publish_done_ns,cpu_time_start_ns,cpu_time_end_ns,bytes_tx_pcap,bytes_rx_pcap,bytes_tx_socket,bytes_rx_socket,tls_cipher_suite,success,error_msg,pcap_path
+0,tls,30,2026-04-17T12:25:52.802879+00:00,manual-test,41115286748000,41115295845600,41115286748000,41115295845600,41115295932200,41115296608900,2515625000,2515625000,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,TLS_AES_256_GCM_SHA384,True,,NOT MEASURED
