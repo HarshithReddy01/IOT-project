@@ -22,7 +22,6 @@ def test_tls_trial_basic():
     assert result.t_handshake_start_ns < result.t_handshake_end_ns
     assert result.t_handshake_end_ns <= result.t_connected_ns
     assert result.t_publish_start_ns < result.t_publish_done_ns
-    # windows timer limits
     assert result.cpu_time_end_ns >= result.cpu_time_start_ns
     assert result.tls_cipher_suite not in ("", "N/A", "UNKNOWN")
 

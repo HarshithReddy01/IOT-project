@@ -14,7 +14,6 @@ result = run_tls_trial(
     client_key=cert_dir / "client.key",
 )
 
-# display metrics only
 handshake_ms = (result.t_handshake_end_ns - result.t_handshake_start_ns) / 1_000_000
 publish_ms   = (result.t_publish_done_ns  - result.t_publish_start_ns)   / 1_000_000
 total_ms     = (result.t_publish_done_ns  - result.t_handshake_start_ns) / 1_000_000
