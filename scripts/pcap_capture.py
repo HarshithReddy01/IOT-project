@@ -67,7 +67,6 @@ def detect_loopback_interface() -> Optional[str]:
                 logger.info("Selected loopback interface number %s (line: %s)", iface, line.strip())
                 return iface
 
-    # try safe fallback
     fallback = r"\Device\NPF_Loopback"
     logger.warning(
         "No loopback line found in tshark -D output; "

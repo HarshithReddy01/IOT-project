@@ -29,7 +29,6 @@ def derive_keys(
     salt = n_c + n_s
 
     def _derive(info_label: str) -> bytes:
-        # split key purposes
         return HKDF(
             algorithm=hashes.SHA256(),
             length=_KEY_LEN,
