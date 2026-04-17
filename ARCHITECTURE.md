@@ -566,6 +566,8 @@ logs/
 
 10. **Single MQTT message per trial.** Each trial publishes exactly one fixed-size payload. Throughput and behavior under multiple messages or subscriptions are not studied.
 
+11. **Windows CPU time resolution.** Python's `time.process_time_ns()` and `time.thread_time_ns()` on Windows are backed by the kernel scheduler tick (~15.6 ms). Individual fast trials (<10 ms wall time) may register as zero CPU delta. The energy proxy (Section 9) therefore has a noise floor of one scheduler tick on Windows. Aggregated over 500 trials, the total CPU time is still meaningful but individual trial CPU time should be interpreted as a lower-bound, not a precise measurement. On Linux this limitation does not apply.
+
 ---
 
 ## 15. Fairness Arguments (Preemptive)
