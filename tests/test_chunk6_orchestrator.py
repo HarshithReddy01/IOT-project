@@ -48,7 +48,6 @@ def test_orchestrator_small_tls_run(tmp_path):
 
 def test_orchestrator_resume(tmp_path):
     csv = tmp_path / "resume.csv"
-    # First run: 3 trials
     subprocess.run(
         [
             sys.executable, "-m", "benchmarks.run_benchmark",
@@ -64,7 +63,6 @@ def test_orchestrator_resume(tmp_path):
     )
     assert len(read_results(csv)) == 3
 
-    # Second run with --resume and 5 total: should add only 2 more
     subprocess.run(
         [
             sys.executable, "-m", "benchmarks.run_benchmark",

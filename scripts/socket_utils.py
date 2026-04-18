@@ -66,6 +66,5 @@ def recv_framed(sock: socket.socket) -> bytes:
     raw_len = _recv_exact(sock, 4)
     (length,) = struct.unpack(">I", raw_len)
     if length > MAX_FRAME:
-        # reject giant frames
         raise ValueError(f"Frame length {length} exceeds MAX_FRAME ({MAX_FRAME})")
     return _recv_exact(sock, length)

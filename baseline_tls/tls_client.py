@@ -56,7 +56,6 @@ def run_tls_trial(
     if payload_bytes is None:
         payload_bytes = os.urandom(payload_size_bytes)
 
-    # prevent ticket reuse
     ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
     ctx.options |= ssl.OP_NO_TICKET
     ctx.load_verify_locations(str(ca_cert))

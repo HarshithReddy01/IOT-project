@@ -19,7 +19,6 @@ class AEAD:
         self._aesgcm = AESGCM(key)
 
     def encrypt(self, plaintext: bytes, associated_data: bytes = b"") -> bytes:
-        # fresh nonce always
         nonce = os.urandom(NONCE_LEN)
         ct_tag = self._aesgcm.encrypt(nonce, plaintext, associated_data or None)
         return nonce + ct_tag
